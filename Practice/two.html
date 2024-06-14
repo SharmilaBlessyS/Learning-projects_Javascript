@@ -1,0 +1,27 @@
+<!--
+<img src="images/clear.png">
+const apiKey = "aa4d9c9f0335fbff173a7434dccc5bc0";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=bangalore";
+
+async function  checkWeather(){
+    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+    var data = await response.json();
+    console.log(data);
+}
+checkWeather();-->
+
+<script>
+    let weather = async (city)=>{
+    let weatherApi = 'http://api.openweathermap.org/data/2.5/weather?=germany&appid=aa4d9c9f0335fbff173a7434dccc5bc0&units=metric';
+    let weatherObj = await fetch(weatherApi)
+    let response = weatherObj.json();
+    return response;
+}
+async function callWeather(){
+    weather('Salem')
+    .then((response)=>{
+        console.log(response);
+    })
+}
+callWeather();
+</script>
