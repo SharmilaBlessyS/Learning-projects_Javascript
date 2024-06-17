@@ -1,4 +1,4 @@
-var webDate = new Date("July 27, 2024 00:00:00").getTime();
+var webDate = new Date("june 21, 2024 00:00:00").getTime();
 var x = setInterval(function () {
     var now = new Date().getTime();
     var distance = webDate - now;
@@ -8,7 +8,7 @@ var x = setInterval(function () {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Pad hours, minutes, and seconds with leading zero if less than 10
+    days = days < 10 ? '0' + days : days;
     hours = hours < 10 ? '0' + hours : hours;
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
@@ -26,4 +26,4 @@ var x = setInterval(function () {
         document.getElementById('sec').innerHTML = "00";
     }
 
-}, 100); // Interval set to 1000ms (1 second)
+}, 100);
