@@ -1,0 +1,71 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(135deg,#5900b3,#b366ff);
+}
+.calculator{
+    width:100%;
+    max-width:600px;
+    margin-left:10%;
+    margin-top: 10%;
+}
+.calculator h1{
+    font-size: 60px;
+
+}
+.calculator h1 span{
+    color:#ffff80;
+}
+.input-box{
+    margin:40px 0;
+    padding:35px;
+    border-radius:10px;
+    background: rgba(255,255,255,0.3);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.input-box input{
+    flex:1;
+    margin-left:20px; /* This controls the space between the icon and input box */
+    padding:14px 15px;
+    border:0;
+    outline:0;
+    font-size:18px;
+    border-radius: 5px;
+    position:relative;
+    /* Remove gap property, it is not applicable here */
+}
+.input-box button{
+    background: #ffff76;
+    border:0;
+    outline:0;
+    padding:18px 20px;
+    border-radius: 5px;
+    font-weight:500;
+    color:#333;
+    cursor: pointer;
+    margin-left:20px; /* Add this line to increase gap between input box and button */
+}
+.input-box input::-webkit-calendar-picker-indicator{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:auto;
+    height:auto;
+    position:absolute;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+}
+#result{
+    font-size: 20px;
+    color:#fff; 
+}
